@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM"],
+    "removeComments": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "incremental": false
+  },
+  "exclude": ["node_modules", "dist"]
+}

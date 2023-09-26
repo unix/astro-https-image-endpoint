@@ -1,0 +1,44 @@
+{
+  "name": "astro-https-image-endpoint",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "As an alternative image endpoint in Astro local development",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "release": "pnpm build && pnpm publish --access public --no-git-checks",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [
+    "astro",
+    "https",
+    "image",
+    "endpoint"
+  ],
+  "engines": {
+    "node": ">=18.14.1",
+    "pnpm": ">=8.6.12"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unix/astro-https-image-endpoint"
+  },
+  "packageManager": "pnpm@8.6.12",
+  "author": "@unix (witt)",
+  "license": "MIT",
+  "prettier": "@mest-fe/prettier",
+  "devDependencies": {
+    "@mest-fe/prettier": "^0.1.0",
+    "@types/node": "^20.7.0",
+    "astro": "^3.1.4",
+    "mime": "^3.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "astro": "^3.0.0"
+  }
+}
