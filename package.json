@@ -34,9 +34,11 @@
     "@mest-fe/prettier": "^0.1.0",
     "@types/node": "^20.7.0",
     "astro": "^3.1.4",
-    "mime": "^3.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "mime": "^3.0.0"
   },
   "peerDependencies": {
     "astro": "^3.0.0"
