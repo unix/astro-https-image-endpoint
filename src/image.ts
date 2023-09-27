@@ -2,7 +2,7 @@ import type { AstroConfig, APIRoute } from 'astro'
 // @ts-ignore
 import { getConfiguredImageService, imageConfig } from 'astro:assets'
 import fs from 'node:fs/promises'
-import os from 'node:os';
+import os from 'node:os'
 // @ts-ignore
 import mime from 'mime/lite'
 
@@ -55,9 +55,10 @@ export const GET: APIRoute = async ({ request }: { request: Request }) => {
   }
 
   let inputBuffer = await loadRemoteImage(sourceUrl)
-  const filePath = (os.platform() === 'win32' 
-    ? transform.src.replace(/^\/@fs\//, '') 
-    : transform.src.replace(/^\/@fs/, '')
+  const filePath = (
+    os.platform() === 'win32'
+      ? transform.src.replace(/^\/@fs\//, '')
+      : transform.src.replace(/^\/@fs/, '')
   ).replace(/\?(.*)$/, '')
   inputBuffer ??= await fs.readFile(filePath)
 
